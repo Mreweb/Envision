@@ -929,6 +929,10 @@ footer .faq-blog .content h5 a {
 .slider-container .item{
     min-height: 400px;
 }
+.slider-container .container{
+    position: relative;
+    height: 400px;
+}
 .slider-container .item .part{
     width: auto;
     position: absolute;
@@ -936,16 +940,21 @@ footer .faq-blog .content h5 a {
     left: 0;
 }
 .slider-container .item .content{
+    max-width: 100%;
+    width: 480px;
+    float: right;
+    direction: rtl;
+    text-align: justify;
 
 }
 .slider-container .item .content h2{
-
+    font-size: 24px;
 }
 .slider-container .item .content h3{
-
+    font-size: 20px;
 }
 .slider-container .item .content p{
-
+    font-size: 16px;
 }
 
 /* end slider */
