@@ -1,0 +1,26 @@
+.header-background{
+    background: url('../images/page-background.jpg');
+    background-size: cover;
+    background-position: center center;
+    direction: rtl;
+    text-align: justify;
+    padding: 40px 0;
+    border-bottom: 1px solid #ebebeb;
+}
+.header-background h1{
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+.header-background .content{
+
+}
+.page-container{
+    min-height: 80vh;
+}
+.page-container .content{
+    padding: 30px;
+    text-align: justify;
+    direction: rtl;
+    line-height: 25px;
+}

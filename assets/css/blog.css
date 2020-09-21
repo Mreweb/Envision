@@ -1,0 +1,58 @@
+.header-background{
+    background: url('../images/page-background.jpg');
+    background-size: cover;
+    background-position: center center;
+    direction: rtl;
+    text-align: justify;
+    padding: 40px 0;
+    border-bottom: 1px solid #ebebeb;
+}
+.header-background h1{
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+.header-background .content{
+
+}
+.blog-container{
+    min-height: 80vh;
+}
+.blog-container .content{
+    padding: 30px;
+    text-align: justify;
+    direction: rtl;
+    line-height: 25px;
+}
+
+.blog-container .thumbnail{
+    padding: 0;
+    border: 10px solid #fff;
+}
+.blog-container .caption{
+    display: inline-block;
+    width: 100%;
+    border: 1px solid #efefef;
+}
+.blog-container .thumbnail img{
+    width: 100%;
+}
+
+.blog-container .thumbnail h3{
+    text-align: center;
+    padding: 6px;
+    margin: 0;
+    font-weight: 900;
+    font-size: 13px;
+}
+.blog-container div.content{
+    padding: 10px;
+}
+
+.blog-container .thumbnail .btn-default{
+    float: left;
+    font-size: 9px;
+}
+.blog-container .shadow{
+    width: 100%;
+}
