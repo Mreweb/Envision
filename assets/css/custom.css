@@ -920,69 +920,32 @@ footer .faq-blog .content h5 a {
     height: 400px;
     max-height: 400px;
 }
-.slide{
-    max-height: 400px;
-    height: 400px;
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-    position: absolute;
-    width: 100%;
-}
-.slide .content{
-    position: absolute;
-    right: 10vw;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    height: 115px;
-    direction: rtl;
-    text-align: justify;
-    color: #fff;
-    background-repeat: no-repeat !important;
-    background-size: 100% 100% !important;
-    padding: 20px;
-    min-width: 380px;
-    opacity:0.8;
-}
-.slide .content h1{
-    font-size: 20px;
-    margin: 0;
-    margin-bottom: 10px;
-}
-.slide .content ul{
-    padding: 0;
-}
-.slide .content ul li{
-    list-style: none;
-    line-height: 22px;
-    font-size: 13px;
-}
-.slide .content ul li:before{
-    content: '\f111';
-    font-family: 'FontAwesome';
-    font-size: 9px;
-    margin-left: 10px;
-}
-.slide-bullet{
-    position: absolute;
-    bottom: 15px;
-    right: 0;
-    left: 0;
-    margin: auto;
-    width: 100%;
-    height: 10px; 
-    text-align: center;
-}
-.slide-bullet .bullet{
-    cursor: pointer;
-    display: inline-block;
+.slide-progress {
+    width: 0;
+    max-width: 100%;
     height: 4px;
-    width: 45px;
-    background: #fff;
-    margin: 0 2px;
+    background: #7fc242;
 }
-.slide-bullet .bullet.hover {
-    background: #0e7bdd;
+.slider-container .item{
+    min-height: 400px;
+}
+.slider-container .item .part{
+    width: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.slider-container .item .content{
+
+}
+.slider-container .item .content h2{
+
+}
+.slider-container .item .content h3{
+
+}
+.slider-container .item .content p{
+
 }
 
 /* end slider */

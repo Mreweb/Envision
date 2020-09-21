@@ -3,13 +3,11 @@ $(document).ready(function () {
     $("#primary_nav_wrap ul ul ul").each(function () {
         $(this).prev('a').append('<i class="fa fa-angle-left navigator"></i>');
     });
-
     $("#primary_nav_wrap ul:first").find('a').each(function () {
         if ($(this).next('ul').length > 0) {
             $(this).after('<i class="fa fa-angle-down menu-arrow-down"></i>');
         }
     });
-
     $("#primary_nav_wrap ul ul").hover(
         function () {
             $(this).prevUntil('li').addClass('hover-effect');
@@ -18,20 +16,17 @@ $(document).ready(function () {
             $(this).prevUntil('li').removeClass('hover-effect');
         }
     );
-
     $(".xs-menu ul:first").find('a').each(function () {
         if ($(this).next('ul').length > 0) {
             $(this).after('<i class="fa fa-angle-down menu-arrow-down"></i>');
         }
     });
-
     $(".xs-menu .menu-arrow-down").click(function () {
         $(this).next('ul').slideToggle();
     });
     $(".menu-handle").click(function () {
         $(".xs-menu nav").slideToggle();
     });
-
     $(".box-container").hover(
         function () {
         $(this).find('img').eq(0).addClass('hover-first');
@@ -42,7 +37,6 @@ $(document).ready(function () {
         $(this).find('img').eq(1).removeClass('hover-last');
     }
     );
-
     $(".blog-section").hover(
         function () {
             $(this).find('h3').addClass('hover-effect');
@@ -51,6 +45,36 @@ $(document).ready(function () {
             $(this).find('h3').removeClass('hover-effect');
         }
     );
+
+
+    //Init the carousel
+    initSlider();
+    function initSlider() {
+        $(".owl-carousel").owlCarousel({
+            items: 1,
+            loop: true,
+            autoplay: true,
+            onInitialized: startProgressBar,
+            onTranslate: resetProgressBar,
+            onTranslated: startProgressBar
+        });
+    }
+    function startProgressBar() {
+        // apply keyframe animation
+        $(".slide-progress").css({
+            width: "100%",
+            transition: "width 5000ms"
+        });
+    }
+    function resetProgressBar() {
+        $(".slide-progress").css({
+            width: 0,
+            transition: "width 0s"
+        });
+    }
+
+
+
 
     $("footer .blog-section").hide();
     $("footer .blog-section").eq(0).show();
