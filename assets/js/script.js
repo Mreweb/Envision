@@ -52,25 +52,36 @@ $(document).ready(function () {
     function initSlider() {
         $(".owl-carousel").owlCarousel({
             items: 1,
+            nav: true,
+            dots: true,
             loop: true,
-            autoplay: true,
+            animateIn: 'animate__fadeIn',
+            animateOut: 'animate__fadeOut',
+            autoplay:10000,
+            autoplayTimeout:10000,
+            navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+            mouseDrag: true,
+            touchDrag: false,
             onInitialized: startProgressBar,
             onTranslate: resetProgressBar,
             onTranslated: startProgressBar
         });
     }
     function startProgressBar() {
-        // apply keyframe animation
         $(".slide-progress").css({
             width: "100%",
-            transition: "width 5000ms"
+            transition: "linear width 10000ms"
         });
+        $(".slider-container .content *").addClass('animate__fadeIn').show();
+        $(".slider-container .part").addClass('animate__fadeInUp').show();
     }
     function resetProgressBar() {
         $(".slide-progress").css({
             width: 0,
-            transition: "width 0s"
+            transition: "linear width 0s"
         });
+        $(".slider-container .content *").removeClass('animate__fadeIn').fadeOut(100);
+        $(".slider-container .part").addClass('animate__fadeInUp').fadeOut(100);
     }
 
 

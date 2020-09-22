@@ -280,7 +280,7 @@ header{
     border-top-right-radius: 3px;
 }
 #primary_nav_wrap li:hover ul li a {
-    color: #7c7c7c;
+    color: #000;
 }
 
 #primary_nav_wrap ul li:hover a + i{
@@ -332,7 +332,7 @@ a.hover-effect + i{
 
 #primary_nav_wrap ul ul a
 {
-    color: #7c7c7c;
+    color: #000;
     background-color: #f1f1f1 !important;
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zd…0iMTAwJSIgc3R5bGU9ImZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50KTsiLz4NCjwvc3ZnPg==) !important;
     background-image: -moz-linear-gradient(top,#fff,#f1f1f1) !important;
@@ -348,7 +348,7 @@ a.hover-effect + i{
     text-align: right;
 }
 #primary_nav_wrap ul ul a:hover {
-    color: #7c7c7c;
+    color: #000;
     background-image: linear-gradient(to bottom,#fff,#e2e2e2) !important;
 }
 
@@ -924,14 +924,17 @@ footer .faq-blog .content h5 a {
     width: 0;
     max-width: 100%;
     height: 4px;
-    background: #7fc242;
+    background: rgb(1, 151, 236);
 }
 .slider-container .item{
-    min-height: 400px;
+    min-height: 450px;
+    background-position: center;
+    background-size: cover !important;
+    background-repeat: no-repeat;
 }
 .slider-container .container{
     position: relative;
-    height: 400px;
+    min-height: 450px;
 }
 .slider-container .item .part{
     width: auto;
@@ -945,16 +948,111 @@ footer .faq-blog .content h5 a {
     float: right;
     direction: rtl;
     text-align: justify;
+    padding: 75px 0;
+}
 
+.slider-container .item .content *{
+    display: none;
 }
 .slider-container .item .content h2{
-    font-size: 24px;
+    margin: 20px 0;
+    background: blue;
+    background: linear-gradient(rgb(18, 143, 252) 0%, rgb(14, 123, 221) 92%, rgb(14, 123, 221) 100%);
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    box-shadow: rgba(68, 68, 68, 0.33) 0px 6px 12px 0px;
+    padding: 16px 20px;
+    border-radius: 3px;
+    transform-origin: 50% 50%;
+    opacity: 1;
+    transform: translate(0px, 0px);
+    visibility: visible;
+}
+.slider-container .item .content h2.delay{
+    animation-delay: 1s;
 }
 .slider-container .item .content h3{
-    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 2px;
+    color: rgb(1, 151, 236);
+    font-size: 16px;
+    padding: 10px 22px;
+    line-height: 30px;
+}
+.slider-container .item .content h3.delay{
+    animation-delay: 1.8s;
 }
 .slider-container .item .content p{
     font-size: 16px;
+    color: #000;
+    padding: 0 4px;
+}
+.slider-container .item .content p.delay{
+    animation-delay: 2.2s;
+}
+
+.owl-carousel .owl-nav button.owl-next{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 30px;
+    background: #919191;
+    color: #fff;
+    height: 100px;
+    margin: auto;
+    border-radius: 0;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    background: #919191;
+    color: #fff;
+    height: 100px;
+    margin: auto;
+    border-radius: 0;
+}
+.owl-carousel .owl-dots{
+    position: absolute;
+    bottom: 35px;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+.owl-theme .owl-nav [class*=owl-]:hover {
+    background: #000000;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.owl-carousel .owl-nav button.owl-prev:focus ,
+.owl-carousel .owl-nav button.owl-next:focus,
+.owl-carousel .owl-dots button:focus
+{
+    outline: 0 !important;
+}
+.owl-theme .owl-dots .owl-dot.active span{
+    background: #0f7ee0;
+}
+.owl-theme .owl-dots .owl-dot span {
+    overflow: hidden;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: inset 0 0 0 2px #007aff;
+    -webkit-transition: background 0.3s ease;
+    transition: background 0.3s ease;
+}
+.owl-theme .owl-dots .owl-dot span:hover,
+.owl-theme .owl-dots .owl-dot:hover span
+  {
+    background-color: rgba(255, 255, 255);
 }
 
 /* end slider */
