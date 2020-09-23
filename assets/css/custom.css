@@ -61,16 +61,12 @@ a{
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff',endColorstr='#f1f1f1')";
 }
 .ui-divider {
-    display: block;
-    margin-bottom: 18px;
-    background-color: #ebebeb !important;
-    border-color: #ebebeb !important;
-    min-width: 100px;
-    height: 1px;
+    display: inline-block;
+    background-color: #fff !important;
+    border-color: #fff !important;
     clear: both;
     width: 100%;
-    margin-top: 22px;
-    margin-bottom: 22px;
+    height: 30px;
 }
 header{
     position: relative;
@@ -430,7 +426,7 @@ a.hover-effect + i{
     width: 100%;
     padding: 30px 10px;
     text-align: center;
-    font-size: 18px;
+    font-size: 26px;
     color: #0e7bdd;
     position: relative;
     overflow: hidden;
@@ -443,11 +439,9 @@ a.hover-effect + i{
 }
 .index-page-title:before{
     content: ' ';
-    width: 20%;
     height: 1px;
-    background: #d2d2d2;
+    background: #0e7bdd;
     display: inline-block;
-    margin-right: 30px;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -455,6 +449,10 @@ a.hover-effect + i{
     right: 0;
     margin: auto;
     width: 100%;
+}
+
+.panel-heading {
+    padding: 20px 15px;
 }
 /*.index-page-title:after{
     content: ' ';
@@ -506,6 +504,8 @@ html.cssanimations .ui--animation-fire.fx--fadein-ttb {
     width: calc(100% - 30px);
     margin: 0 auto;
     border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    overflow: hidden;
 }
 .box-container .image-container{
     height: 220px;
@@ -513,11 +513,11 @@ html.cssanimations .ui--animation-fire.fx--fadein-ttb {
     overflow: hidden;
 }
 .box-container .image-container img{
-    top:0;
+    top: 0;
     max-width: 100%;
     width: 100%;
     max-height: 250px;
-    height: 250px;
+    height: auto;
     display: block;
     position: absolute;
     -webkit-transition: ease-In-Out 0.5s;
@@ -556,12 +556,13 @@ html.cssanimations .ui--animation-fire.fx--fadein-ttb {
     width: calc(100% - 30px);
     display: inline-block;
     text-align: center;
-    border: 1px solid #bbbbbb;
+    border: 0px solid #bbbbbb;
     border-radius: 5px;
     padding: 8px;
-    color: rgb(255, 197, 78);
-    margin: 0 auto;
+    color: rgb(19 140 248);
     margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 900;
 }
 .box-container .shadow{
     width: 100%;
@@ -664,7 +665,7 @@ html.cssanimations .ui--animation-fire.fx--fadein-ttb {
     text-align: justify;
 }
 .faq-blog .content a{
-    color: rgb(255, 197, 78);
+    color: rgb(14 123 221);
     border: 1px solid #ccc;
     float: left;
     display: block;
@@ -917,8 +918,7 @@ footer .faq-blog .content h5 a {
 .slider-container{
     margin-bottom: 40px;
     position: relative;
-    height: 400px;
-    max-height: 400px;
+    height: 450px;
 }
 .slide-progress {
     width: 0;
