@@ -673,8 +673,12 @@ html.cssanimations .ui--animation-fire.fx--fadein-ttb {
     margin-top: 8px;
     font-size: 11px;
 }
-
-.tabs{
+.panel-group {
+    margin-bottom: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.faq-blog .tabs{
     padding-left: 40px;
 }
 .panel-heading{
@@ -894,13 +898,14 @@ footer .faq-blog .content div {
     font-size: 10px;
 }
 footer .faq-blog .content a {
+
     color: #ffffff;
     border: 1px solid #5a5a5a;
     float: left;
     display: block;
-    padding: 4px;
-    margin-top: 0px;
-    font-size: 8px;
+    padding: 0px 25px;
+    margin-top: 8px;
+    font-size: 10px;
 }
 footer .faq-blog .content h5 a {
     color: #ffffff;
@@ -1054,5 +1059,4 @@ footer .faq-blog .content h5 a {
   {
     background-color: rgba(255, 255, 255);
 }
-
 /* end slider */

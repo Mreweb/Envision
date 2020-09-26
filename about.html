@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="assets/css/animate.min.css"/>
+    <link rel="stylesheet" href="assets/plugins/owl/dist/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="assets/plugins/owl/dist/assets/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="assets/css/font-awesome-css.min.css"/>
+    <link rel="stylesheet" href="assets/css/custom.css"/>
+    <link rel="stylesheet" href="assets/css/responsive.css"/>
+    <style>
+
+        .btn{
+            display:inline-block;
+            padding:5px 16px;
+            margin-bottom:0;
+            font-size:12px;
+            line-height:20px;
+            color:#333;
+            text-align:center;
+            text-shadow:0 1px 1px rgba(255,255,255,.75);
+            vertical-align:middle;
+            cursor:pointer;
+            background-color:#f5f5f5;
+            background-image:linear-gradient(to bottom,#fff,#e6e6e6);
+            background-repeat:repeat-x;
+            border:1px solid #ccc;
+            border-color:#e6e6e6 #e6e6e6 #bfbfbf;
+            border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+            border-bottom-color:#b3b3b3;
+            border-radius:4px;
+            -wekbit-box-shadow:0 2px 2px rgba(0,0,0,.05),0 1px 0 rgba(0,0,0,.08);
+            box-shadow:0 2px 2px rgba(0,0,0,.05),0 1px 0 rgba(0,0,0,.08)
+        }
+        .btn:active,.btn:focus,.btn:hover{
+            color:#333;
+            background-color:#e6e6e6
+        }
+        .btn:focus,.btn:hover{
+            color:#333;
+            text-decoration:none;
+            background-position:0 -15px;
+            transition:background-position .1s linear
+        }
+        .btn:focus{
+            outline:thin dotted #333;
+            outline:5px auto -webkit-focus-ring-color;
+            outline-offset:-2px
+        }
+        .btn:active{
+            background-image:none;
+            outline:0;
+            box-shadow:inset 0 2px 4px rgba(0,0,0,.15),0 1px 2px rgba(0,0,0,.05)
+        }
+        .btn-large{
+            padding:14px 28px;
+            font-size:18px;
+            border-radius:5px
+        }
+        .btn-large [class*=" fontawesome-"]{
+            margin-top:4px
+        }
+        .btn-block{
+            display:block;
+            width:100%;
+            padding-right:0;
+            padding-left:0;
+            box-sizing:border-box
+        }
+        .pull-right{
+            float:right
+        }
+        .pull-left{
+            float:left
+        }
+        .clearfix:after,.clearfix:before{
+            display:table;
+            line-height:0;
+            content:""
+        }
+        .clearfix:after{
+            clear:both
+        }
+        @-ms-viewport{
+            width:device-width
+        }
+        @media (min-width:768px) and (max-width:979px){
+            .row{
+                margin-left:-20px
+            }
+            .row:after,.row:before{
+                display:table;
+                line-height:0;
+                content:""
+            }
+            .row:after{
+                clear:both
+            }
+            .container{
+                width:724px
+            }
+            input{
+                margin-left:0
+            }
+        }
+        @media (max-width:767px){
+            a{
+                transition-property:none!important;
+                -ms-transform:none!important;
+                transform:none!important;
+                animation:none!important
+            }
+            #the-content{
+                float:none!important;
+                width:auto!important
+            }
+            .container-fluid{
+                padding:0
+            }
+            .container{
+                width:auto
+            }
+            .row{
+                margin-left:0
+            }
+        }
+        @media (max-width:979px){
+            body{
+                padding-top:0
+            }
+        }
+        html{
+            overflow-x:hidden
+        }
+        a{
+            color:#169fe6;
+            outline:hidden;
+            transition:all .2s ease-in-out;
+            -moz-transition:all .2s ease-in-out;
+            -webkit-transition:all .2s ease-in-out;
+            -o-transition:all .2s ease-in-out
+        }
+        a:hover{
+            color:#070401;
+            text-decoration:none
+        }
+        a:active,a:focus{
+            text-decoration:none
+        }
+
+        h1,h3,h4,h5,h6{
+            margin:10px 0 18px
+        }
+        h1{
+            font-size:36px;
+            direction: rtl;
+            text-align: justify;
+        }
+        h3{
+            font-size:24px
+        }
+        h4{
+            font-size:22px
+        }
+        h5{
+            font-size:18px
+        }
+        h6{
+            font-size:16px
+        }
+        p{
+
+            margin-bottom: 18px;
+            line-height: 32px;
+            direction: rtl;
+            text-align: justify;
+            font-size: 14px;
+        }
+        .radius-3px{
+            border-radius:3px!important
+        }
+        .text-left{
+            text-align:left
+        }
+        .text-center{
+            text-align:center
+        }
+        .text-justify{
+            text-align:justify
+        }
+        .ui--block{
+            display:block
+        }
+        .ui--gradient.on--hover{
+            transition:background-position .1s linear
+        }
+        .ui--gradient.on--hover:hover{
+            background-position:0 -15px
+        }
+        .ui--gradient-grey{
+            background-color:#f1f1f1;
+            background-image:url(data:image/svg+xml;
+            base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc2ODkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGRkZGRkYiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGMUYxRjEiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c2ODkpIiAvPgo8L3N2Zz4=);
+            background-image:linear-gradient(to bottom,#fff,#f1f1f1);
+            background-repeat:repeat-x
+        }
+        .ui--gradient-grey.on--hover:hover{
+            background-color:#f1f1f1!important
+        }
+        .ui--gradient-grey{
+            text-shadow:0 1px 1px rgba(255,255,255,.75)
+        }
+        form{
+            margin:0
+        }
+        input[type=text]{
+            padding:4px 6px;
+            margin-bottom:10px;
+            font-size:14px;
+            line-height:20px;
+            color:#555;
+            border-color:#e1e1e1;
+            box-shadow:0 1px 2px 0 rgba(180,180,180,.2);
+            border-radius:3px;
+            min-height:30px;
+            box-sizing:border-box;
+            max-width:100%
+        }
+        input{
+            font-size:100%
+        }
+        .ui--box{
+            border:1px solid #ebebeb;
+            border-bottom:1px solid rgba(0,0,0,.22);
+            border-radius:3px;
+            box-shadow:0 3px 0 rgba(0,0,0,.03),0 1px 0 rgba(0,0,0,.07);
+            background-clip:border-box;
+            background-color:#fff
+        }
+        @media (max-width:767px){
+            #the-content>.ui-row{
+                padding-left:40px!important;
+                padding-right:40px!important
+            }
+        }
+        p.has-drop-cap:not(:focus):first-letter{
+            font-size:60px;
+            font-weight:700
+        }
+        @media (min-width:768px){
+        }
+        .ui--shadow{
+            display:block;
+            pointer-events:none;
+            position:relative;
+            z-index:1
+        }
+        .ui--shadow img{
+            pointer-events:none;
+            margin:auto;
+            display:block;
+            width:100%!important;
+            max-width:1170px!important;
+            max-height:none!important;
+            height:auto!important
+        }
+        .ui--shadow-abs img{
+            position:absolute
+        }
+        .ui--shadow{
+            max-height:18px
+        }
+        .ui--shadow-abs{
+            height:18px
+        }
+        .ui--shadow-reset{
+            margin-top:-18px
+        }
+        .ui--content-box{
+            position:relative;
+            margin-bottom:18px;
+            border-radius:3px
+        }
+        .ui--carousel .ui--content-item{
+            margin-bottom:18px
+        }
+        .ui--content-box-title{
+            padding:12px 20px 9px;
+            border-bottom:1px solid #ebebeb;
+            word-break:break-word
+        }
+        .ui--content-box-title-text{
+            margin:0 0 3px
+        }
+        .ui--content-box-title-caption{
+            margin: 0 0 3px;
+            display: block;
+            height: 100px;
+            line-height: 35px;
+        }
+        .ui--content-box-link{
+            cursor:pointer
+        }
+        .ui--content-box-link,.ui--content-box-link:hover,.ui--content-box-title,.ui--content-box-title-caption,.ui--content-box-title-caption:hover,.ui--content-box-title-text,.ui--content-box-title-text:hover,.ui--content-box-title:hover{
+            text-decoration:none!important
+        }
+        .ui--content-box-media{
+            position:relative;
+            z-index:3;
+            border-bottom:1px solid #ebebeb;
+            overflow:hidden
+        }
+        .ui--content-box-media .ui--content-box-link{
+            display:block
+        }
+        .ui--content-box-image{
+            width:100%;
+            height:100%;
+            -webkit-border-top-left-radius:3px;
+            -webkit-border-top-right-radius:3px;
+            -moz-border-radius-topleft:3px;
+            -moz-border-radius-topright:3px;
+            border-top-left-radius:3px;
+            border-top-right-radius:3px
+        }
+        .ui--content-box-image-default{
+            display:block;
+            position:absolute;
+            z-index:1;
+            overflow:hidden;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            width:100%
+        }
+        .ui--content-box-overlay{
+            position:absolute;
+            overflow:hidden;
+            z-index:2;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            -webkit-border-top-left-radius:3px;
+            -webkit-border-top-right-radius:3px;
+            -moz-border-radius-topleft:3px;
+            -moz-border-radius-topright:3px;
+            border-top-left-radius:3px;
+            border-top-right-radius:3px
+        }
+        .ui--content-box-media.type--default .ui--content-box-overlay{
+            top:-1px;
+            left:-1px;
+            right:-1px;
+            bottom:-1px
+        }
+        .ui--content-box-image-default,.ui--content-box-overlay{
+            transition:all 1s cubic-bezier(.19,1,.22,1);
+            -moz-transition:all 1s cubic-bezier(.19,1,.22,1);
+            -webkit-transition:all 1s cubic-bezier(.19,1,.22,1);
+            -o-transition:all 1s cubic-bezier(.19,1,.22,1)
+        }
+        .ui--content-box .ui--content-box-media.effect--fade .ui--content-box-overlay{
+            opacity:0
+        }
+        .ui--content-box:hover .ui--content-box-media.effect--fade .ui--content-box-overlay{
+            opacity:1
+        }
+        .ui--content-box-overlay-background{
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            background-color:#333;
+            opacity:.6;
+            z-index:1;
+            -webkit-border-top-left-radius:3px;
+            -webkit-border-top-right-radius:3px;
+            -moz-border-radius-topleft:3px;
+            -moz-border-radius-topright:3px;
+            border-top-left-radius:3px;
+            border-top-right-radius:3px
+        }
+        .ui--content-box .ui--content-box-overlay div.center{
+            position:absolute;
+            top:50%;
+            left:0;
+            width:100%;
+            text-align:center;
+            z-index:2;
+            transition:all 1s cubic-bezier(.19,1,.22,1);
+            -moz-transition:all 1s cubic-bezier(.19,1,.22,1);
+            -webkit-transition:all 1s cubic-bezier(.19,1,.22,1);
+            -o-transition:all 1s cubic-bezier(.19,1,.22,1);
+            -ms-transform:translateY(-400%);
+            transform:translateY(-400%);
+            -ms-transform:translateY(-400%);
+            -ms-transform:translateY(-400%);
+            transform:translateY(-400%);
+            transform:translateY(-400%);
+            -ms-transform:translateY(-400%);
+            transform:translateY(-400%)
+        }
+        .ui--content-box:hover .ui--content-box-overlay div.center{
+            -ms-transform:translateY(0);
+            transform:translateY(0);
+            -ms-transform:translateY(0);
+            -ms-transform:translateY(0);
+            transform:translateY(0);
+            transform:translateY(0);
+            -ms-transform:translateY(0);
+            transform:translateY(0)
+        }
+        .ui--content-box .ui--content-box-overlay div.center .btn{
+            padding:10px 7px 10px 15px;
+            margin-top:-24px;
+            margin-bottom:0!important
+        }
+        .ui--content-box .ui--content-box-overlay .ui--content-box-overlay-button-icon,.ui--content-box .ui--content-box-overlay .ui--content-box-overlay-button-text{
+            padding-right:8px
+        }
+        .ui--content-box-link{
+            position:static!important
+        }
+        .btn{
+            text-decoration:none!important;
+            background-clip:border-box;
+            transition:color .1s ease-out,background-position .1s ease-in,background-color .1s ease-in,border-color .1s ease-in!important;
+            border:0;
+            font-size:12px;
+            margin-right:5px;
+            margin-bottom:18px;
+            white-space:normal
+        }
+        .btn .button-icon{
+            margin-right:6px
+        }
+        .rtl .btn .button-icon{
+            margin-left:6px;
+            margin-right:0
+        }
+        .btn.btn-icon-right .button-icon{
+            margin-right:0;
+            margin-left:6px
+        }
+        .rtl .btn.btn-icon-right .button-icon{
+            margin-left:0;
+            margin-right:6px
+        }
+        .btn-block{
+            margin-left:0!important;
+            margin-right:0!important;
+            margin-bottom:18px
+        }
+        .ui--button-wrapper .btn{
+            margin-left:0!important;
+            margin-right:0!important;
+            margin-bottom:0!important
+        }
+        .btn-grey{
+            color:#7c7c7c!important;
+            border:1px solid #ccc
+        }
+        .btn-grey:active,.btn-grey:focus,.btn-grey:hover{
+            color:#333!important
+        }
+        .btn-yellow{
+            color:#896614!important;
+            text-shadow:0 1px 0 rgba(255,255,255,.5)!important;
+            background-color:#fede4b;
+            background-image:url(data:image/svg+xml;
+            base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPg0KICAgIDxkZWZzPg0KICAgICAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiIHNwcmVhZE1ldGhvZD0icGFkIj4NCiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmZWRlNGIiIHN0b3Atb3BhY2l0eT0iMSIvPg0KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmViNTIxIiBzdG9wLW9wYWNpdHk9IjEiLz4NCiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4NCiAgICA8L2RlZnM+DQogICAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50KTsiLz4NCjwvc3ZnPg==);
+            background-image:linear-gradient(to bottom,#fede4b,#feb521);
+            background-repeat:repeat-x
+        }
+        .btn-yellow:active,.btn-yellow:focus,.btn-yellow:hover{
+            color:#896614!important;
+            background-color:#feb521!important;
+            background-position:0 -5px!important
+        }
+        input[type=submit]{
+            display:inline-block;
+            padding:5px 16px;
+            margin-bottom:0;
+            font-size:12px;
+            line-height:20px;
+            color:#333;
+            text-align:center;
+            text-shadow:0 1px 1px rgba(255,255,255,.75);
+            vertical-align:middle;
+            cursor:pointer;
+            background-color:#f5f5f5;
+            background-image:linear-gradient(to bottom,#fff,#e6e6e6);
+            background-repeat:repeat-x;
+            border:1px solid #ccc;
+            border-color:#e6e6e6 #e6e6e6 #bfbfbf;
+            border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+            border-bottom-color:#b3b3b3;
+            border-radius:4px;
+            font-weight:700
+        }
+        input[type=submit]:focus,input[type=submit]:hover{
+            color:#333;
+            background-color:#e6e6e6
+        }
+        input[type=submit]:focus,input[type=submit]:hover{
+            color:#333;
+            text-decoration:none;
+            background-position:0 -15px;
+            transition:background-position .1s linear
+        }
+        input[type=submit]:focus{
+            outline:thin dotted #333;
+            outline:5px auto -webkit-focus-ring-color;
+            outline-offset:-2px
+        }
+        input[type=submit]:active{
+            background-image:none;
+            outline:0
+        }
+        input[type=submit]{
+            color:#7c7c7c!important;
+            border:1px solid #ccc
+        }
+        input[type=submit]:active,input[type=submit]:focus,input[type=submit]:hover{
+            color:#333!important
+        }
+        .rtl .ui--carousel{
+            direction:ltr
+        }
+        .rtl .ui--carousel-content{
+            direction:rtl
+        }
+        .ui--carousel{
+            margin:0;
+            padding:0
+        }
+        .ui--carousel{
+            position:relative;
+            zoom:1
+        }
+        .ui--divider{
+            display:block;
+            margin-bottom:18px;
+            background-color:#ebebeb!important;
+            border-color:#ebebeb!important;
+            min-width:100px
+        }
+        .ui--divider-mini{
+            height:1px;
+            margin-left:auto;
+            margin-right:auto;
+            width:25%;
+            min-width:100px
+        }
+        .ui--progress{
+            margin-bottom:18px
+        }
+        .ui--progress-title{
+            margin-bottom:6px;
+            text-align: right;
+        }
+        .ui--progress-bar,.ui--progress-percent{
+            border-radius:3px;
+            position:relative
+        }
+        .ui--progress-percent{
+            height: 18px;
+            padding: 1px;
+            margin: -1px;
+            float: right;
+        }
+        .ui--progress.animated .ui--progress-percent{
+            transition:width .6s ease-in-out;
+            -moz-transition:width .6s ease-in-out;
+            -webkit-transition:width .6s ease-in-out;
+            -o-transition:width .6s ease-in-out
+        }
+        .ui--progress-stripe{
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            opacity:1;
+            transition:opacity .3s ease;
+            background-size:30px 30px;
+            background-image:linear-gradient(45deg,rgba(0,0,0,.1) 25%,transparent 25%,transparent 50%,rgba(0,0,0,.1) 50%,rgba(0,0,0,.1) 75%,transparent 75%,transparent);
+            animation:barberpole .5s linear infinite;
+            -webkit-animation:barberpole .5s linear infinite
+        }
+        @keyframes barberpole{
+            from{
+                background-position:0 0
+            }
+            to{
+                background-position:60px 30px
+            }
+        }
+        .ui--title{
+            margin-bottom:18px
+        }
+        .ui--title-bordered{
+            position:relative
+        }
+        .ui--title-bordered.with-navigation .ui--title-holder{
+            margin-right:80px
+        }
+        .rtl .ui--title-bordered.with-navigation .ui--title-holder{
+            margin-right: 0;
+            margin-left: 0;
+            text-align: right;
+            display: inline-block;
+            width: 100%;
+            margin-top: 50px;
+        }
+        .ui--title-holder{
+            position:relative;
+            overflow:hidden
+        }
+        .ui--title-text{
+            position:relative;
+            display:inline-block;
+            zoom:1;
+            margin:0!important;
+            padding-right:30px;
+            max-width:90%;
+            text-decoration:none
+        }
+        .rtl .ui--title-text{
+            position: relative;
+            display: inline-block;
+            zoom: 1;
+            margin: 0!important;
+            padding-right: 0;
+            max-width: 100%;
+            text-decoration: none;
+            text-align: right;
+            width: 100%;
+        }
+        @media (max-width:767px){
+            .btn{
+                white-space:normal
+            }
+            .ui--carousel.fullwidth-content{
+                margin-left:0!important;
+                width:100%!important
+            }
+            #the-content>:not(.fullwidth-content):not(.ui--animation-in){
+                padding-left:40px!important;
+                padding-right:40px!important
+            }
+        }
+        ​ .rtl .widget_recent_comments ul li:before{
+            content:"\f104";
+            margin-right:-14px;
+            margin-left:0
+        }
+        ​ .ie7 .widget_recent_comments ul li{
+            padding-left:10px;
+            list-style:inside square
+        }
+
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <header>
+        <div class="row top-menu">
+            <div class="container">
+                <div class="col-md-3 col-sm-4 col-xs-6 contact-info float-right zp">
+                    <ul>
+                        <li>
+                            <i class="fa fa-phone"></i>
+                            <span> (021) 61978000 </span>
+                        </li>
+                        /
+                        <li>
+                            <i class="fa fa-envelope"></i>
+                            <span> info@fjmc.ir </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-9 col-sm-8 col-xs-6 permalink">
+                    <!--                    <ul class="login float-left ui-gradient-grey">-->
+                    <!--                        <li>-->
+                    <!--                            <a href="#">ورود</a>-->
+                    <!--                        </li>-->
+                    <!--                    </ul>-->
+                    <!--                    <ul class="cart float-left">-->
+                    <!--                        <li>-->
+                    <!--                            <a href="#">سبد خرید 0</a>-->
+                    <!--                            <i class="fa fa-angle-right"></i>-->
+                    <!--                        </li>-->
+                    <!--                    </ul>-->
+                    <ul class="social float-left">
+                        <li>
+                            <a class="google-plus" href="#"></a>
+                            <a class="linkedin" href="#"></a>
+                            <a class="rss" href="#"></a>
+                            <a class="facebook" href="#"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row menu-container">
+            <div class="container">
+                <div class="col-md-3 col-xs-6 float-right zp logo-container text-center">
+                    <img src="assets/images/logo.png" class="logo"/>
+                </div>
+                <div class="col-md-9 col-sm-12 col-xs-12 zp hidden-sm hidden-xs">
+                    <nav id="primary_nav_wrap">
+                        <ul>
+                            <li class="current-menu-item"><a href="#">خانه</a></li>
+                            <li>
+                                <a href="#">درباره ما</a>
+                                <ul>
+                                    <li><a href="#">معرفی شرکت</a></li>
+                                    <li><a href="#">مجوزها و تفاهم نامه ها</a></li>
+                                    <li><a href="#">مشتریان</a></li>
+                                    <li><a href="#">مشاوران</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">خدمات</a>
+                                <ul>
+                                    <li><a href="#">تجزیه‌و تحلیل مشاغل و مدلسازی شایستگی</a></li>
+                                    <li><a href="#">آزمون سنجش تناسب شغلی</a></li>
+                                    <li><a href="#">مصاحبه استخدامی</a></li>
+                                    <li><a href="#">کانون ارزیابی و توسعه شایستگی‌ها</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">دوره‌های آموزشی</a>
+                                <ul>
+                                    <li><a href="#">پرورش ارزیاب کانون‌های ارزیابی و توسعه</a></li>
+                                    <li><a href="#">دوره تربیت مصاحبه‌گر</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">اخبار و رویدادها</a></li>
+                            <li><a href="#">درخواست همکاری</a></li>
+                            <li><a href="#">ارتباط با ما</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-9 col-xs-12 zp xs-menu visible-sm visible-xs">
+                    <i class="fa fa-bars menu-handle"></i>
+                    <nav>
+                        <ul>
+                            <li class="current-menu-item"><a href="#">خانه</a></li>
+                            <li>
+                                <a href="#">درباره ما</a>
+                                <ul>
+                                    <li><a href="#">معرفی شرکت</a></li>
+                                    <li><a href="#">مجوزها و تفاهم نامه ها</a></li>
+                                    <li><a href="#">مشتریان</a></li>
+                                    <li><a href="#">مشاوران</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">خدمات</a>
+                                <ul>
+                                    <li><a href="#">تجزیه‌و تحلیل مشاغل و مدلسازی شایستگی</a></li>
+                                    <li><a href="#">آزمون سنجش تناسب شغلی</a></li>
+                                    <li><a href="#">مصاحبه استخدامی</a></li>
+                                    <li><a href="#">کانون ارزیابی و توسعه شایستگی‌ها</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">دوره‌های آموزشی</a>
+                                <ul>
+                                    <li><a href="#">پرورش ارزیاب کانون‌های ارزیابی و توسعه</a></li>
+                                    <li><a href="#">دوره تربیت مصاحبه‌گر</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">اخبار و رویدادها</a></li>
+                            <li><a href="#">درخواست همکاری</a></li>
+                            <li><a href="#">ارتباط با ما</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="ui-divider"></div>
+
+    <div class="container rtl text-justify" id="the-content">
+        <div class="ui-row row">
+            <div class="ui-column col-md-8 col-xs-12 pull-right">
+                <h1 id="custom-title-1" class="ui--animation " style="font-size: 48px; line-height: 42px; "><strong>معرفی شرکت</h1>
+                <div class="ui-row row">
+                    <div class="ui-column">
+                        <div class="auto-format ui--animation">
+                            <p>
+                                <strong>
+                                    شرکت مشاوره مدیریت فرهیختگان یکی از 5 مجموعه حقوقی فعال در ذیل هلدینگ فرهیختگان جوان است که سابقه‌ای طولانی در زمینه نیرویابی، ارزیابی، استخدام و توسعه سرمایه انسانی سازمان‌ها دارد. یکی از نقاط تمایز این شرکت از سایر مجموعه‌عای مشابه، این است که با طراحی آزمون‌ها و تحلیل مشاغل توانسته است ابزار خوبی برای شناسایی ویژگی‌های روان‌شناختی و توانمندی‌های افراد و ارزیابی تناسب آن¬ها با مشاغل مختلف طراحی نماید. این ابزار در کنار ابزارهای مرسوم کانون ارزیابی، باعث تقویت ارزیابی‌ها و بررسی‌ها خواهد شد.
+                                </strong>
+                            </p>
+                            <p>
+                                <strong>
+                                    این شرکت در سال ...... با هدف کمک به سازمان‌ها در راستای مدیریت اثربخش و کارآمد سرمایه انسانی تاسیس گردیده و در این راستا ابزارهای مختلفی (آزمون‌ها، نرم‌افزارها و...) را توسعه داده است. ابزارهای مذکور  تاکنون مورد استفاده سازمان‌های متعددی قرار گرفته است و شرکت مفتخر بوده است که رضایت کامل سازمان‌های مذکور را جلب نماید.
+                                </strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-column col-md-4 col-xs-12 pull-left">
+                <div class="ui--title ui--animation ui--title-bordered text-left">
+                    <div class="ui--title-holder">
+                        <h3 class="ui--title-text">خدمات</h3>
+                    </div>
+                </div>
+                <div id="progress-bar-1" class="ui--progress clearfix animated">
+                    <div class="ui--progress-title">تجزیه‌و تحلیل مشاغل و مدلسازی شایستگی</div>
+                    <div class="ui--progress-bar ui--box">
+                        <div class="ui--progress-percent ui--gradient ui--accent-gradient" style="width: 100%; visibility: visible;" data-value="95%">
+                            <div class="ui--progress-stripe"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="progress-bar-2" class="ui--progress clearfix animated">
+                    <div class="ui--progress-title">آزمون سنجش تناسب شغلی</div>
+                    <div class="ui--progress-bar ui--box">
+                        <div class="ui--progress-percent ui--gradient ui--accent-gradient" style="width: 100%; visibility: visible;" data-value="80%">
+                            <div class="ui--progress-stripe"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="progress-bar-3" class="ui--progress clearfix animated">
+                    <div class="ui--progress-title">مصاحبه استخدامی</div>
+                    <div class="ui--progress-bar ui--box">
+                        <div class="ui--progress-percent ui--gradient ui--accent-gradient" style="width: 100%; visibility: visible;" data-value="85%">
+                            <div class="ui--progress-stripe"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="progress-bar-4" class="ui--progress clearfix animated">
+                    <div class="ui--progress-title">کانون ارزیابی و توسعه شایستگی‌ها</div>
+                    <div class="ui--progress-bar ui--box">
+                        <div class="ui--progress-percent ui--gradient ui--accent-gradient" style="width: 100%; visibility: visible;" data-value="85%">
+                            <div class="ui--progress-stripe"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui--divider ui--animation clearfix ui--divider-mini"></div>
+                <div class="auto-format ui--animation">
+                    <p>
+                        سازمان‌های مختلفی از خدمات این شرکت در راستای جذب و توسعه منابع انسانی خود استفاده نموده‌اند
+                    </p>
+                </div>
+                <div class="text-center ui--animation ui--button-wrapper" style="">
+                    <div class="ui--block">
+                        <a class="btn btn-large btn-block btn-icon-right with-icon button-hover btn-yellow radius-3px" href="https://envision.wptation.com/contact-2/">مشاوره رایگان<span class="button-icon"><i class="ui--icon ui--icon btn-icon icon-normal fontawesome-angle-right"></i></span></a>
+                        <div class="ui--shadow ui--shadow-type-2 ui--shadow-abs clearfix">
+                            <noscript><img src="https://envision.wptation.com/wp-content/themes/envision/includes/modules/module.shadow/shadows/shadow-2.png" alt="shadow" /></noscript>
+                            <img class=" ls-is-cached lazyloaded" src="https://envision.wptation.com/wp-content/themes/envision/includes/modules/module.shadow/shadows/shadow-2.png" data-src="https://envision.wptation.com/wp-content/themes/envision/includes/modules/module.shadow/shadows/shadow-2.png" alt="shadow">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui--title ui--animation ui--title-bordered text-left with-navigation">
+            <div class="ui--title-holder">
+                <h3 class="ui--title-text">با تیم ما آشنا شوید</h3>
+            </div>
+        </div>
+        <div class="ui--animation-in make--fx--appear ui--pass clearfix" data-fx="fx--appear" data-delay="400" data-start-delay="200">
+            <div class="ui--carousel clearfix fullwidth-content" data-options="" style="">
+                <div class="" style="">
+                    <div class="" style="">
+                        <div class="ui--carousel-content clearfix ui--carousel-active-slide" style="/* width: 1584px; */float: left;display: block;">
+                            <div class="container">
+                                <div class="ui-row">
+                                    <div class="">
+                                        <div class="ui-column col-md-3 col-sm-6 col-xs-12">
+                                            <div class="ui--box-widget">
+                                                <div class="ui--block ui--content-item ui--pass fx--appear ui--animation-fire">
+                                                    <div class="ui--content-box ui--box ui-row">
+                                                        <div class="ui--content-box-header">
+                                                            <div class="ui--content-box-media effect--fade type--default clearfix" style="padding-bottom: 133.33%;">
+                                                                <a class="ui--content-box-link" href="https://envision.wptation.com/team/team-member/">
+                                                                    <div class="ui--content-box-image-default">
+                                                                        <noscript><img  class="ui--content-box-image" src="https://envision.wptation.com/wp-content/uploads/2013/08/terry_bartlett-1-570x760.jpg" alt="" title=""/></noscript>
+                                                                        <img class="ui--content-box-image ls-is-cached lazyloaded" src="https://envision.wptation.com/wp-content/uploads/2013/08/terry_bartlett-1-570x760.jpg" data-src="https://envision.wptation.com/wp-content/uploads/2013/08/terry_bartlett-1-570x760.jpg" alt="" title="" draggable="false">
+                                                                    </div>
+                                                                    <div class="ui--content-box-overlay">
+                                                                        <div class="ui--content-box-overlay-background"></div>
+                                                                        <div class="center"><span class="btn btn-grey ui--center-vertical" data-height="22" style="margin-top: -11px;">
+                                                                            <span class="ui--content-box-overlay-button-text">سوابق و تحصیلات</span>
+                                                                            <span class="ui--content-box-overlay-button-icon"><i class="ui--icon fontawesome-caret-right"></i></span></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                            <a class="ui--content-box-link" href="https://envision.wptation.com/team/team-member/">
+                                                                <div class="ui--content-box-title ui--gradient ui--gradient-grey on--hover clearfix text-center">
+                                                                    <h5 class="ui--content-box-title-text"><strong>دکتر میرعلی سیدنقوی</strong></h5>
+                                                                    <h6 class="ui--content-box-title-caption">عضو هیئت علمی دانشکده مدیریت و حسابداری دانشگاه علامه طباطبایی (ره)</h6>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ui--shadow ui--shadow-type-2 ui--shadow-abs ui--shadow-reset clearfix">
+                                                        <noscript><img src="https://envision.wptation.com/wp-content/themes/envision/includes/modules/module.shadow/shadows/shadow-2.png" alt="shadow" /></noscript>
+                                                        <img class=" ls-is-cached lazyloaded" src="https://envision.wptation.com/wp-content/themes/envision/includes/modules/module.shadow/shadows/shadow-2.png" data-src="https://envision.wptation.com/wp-content/themes/envision/includes/modules/module.shadow/shadows/shadow-2.png" alt="shadow" draggable="false">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ui-column col-md-3 col-sm-6 col-xs-12">
+                                            <div class="ui--box-widget">
+                                                <div class="ui--block ui--content-item ui--pass fx--appear ui--animation-fire">
+                                                    <div class="ui--content-box ui--box ui-row">
+                                                        <div class="ui--content-box-header">
+                                                            <div class="ui--content-box-media effect--fade type--default clearfix" style="padding-bottom: 133.33%;">
+                                                                <a class="ui--content-box-link" href="https://envision.wptation.com/team/team-member/">
+                                                                    <div class="ui--content-box-image-default">
+                                                                        <noscript><img  class="ui--content-box-image" src="https://envision.wptation.com/wp-content/uploads/2013/08/terry_bartlett-1-570x760.jpg" alt="" title=""/></noscript>
+                                                                        <img class="ui--content-box-image ls-is-cached lazyloaded" src="https://envision.wptation.com/wp-content/uploads/2013/08/terry_bartlett-1-570x760.jpg" data-src="https://envision.wptation.com/wp-content/uploads/2013/08/terry_bartlett-1-570x760.jpg" alt="" title="" draggable="false">
+                                                                    </div>
+                                                                    <div class="ui--content-box-overlay">
+                                                                        <div class="ui--content-box-overlay-background"></div>
+                                                                        <div class="center"><span class="btn btn-grey ui--center-vertical" data-height="22" style="margin-top: -11px;">
+                                                                            <span class="ui--content-box-overlay-button-text">سوابق و تحصیلات</span>
+                                                                            <span class="ui--content-box-overlay-button-icon"><i class="ui--icon fontawesome-caret-right"></i></span></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                            <a class="ui--content-box-link" href="https://envision.wptation.com/team/team-member/">
+                                                                <div class="ui--content-box-title ui--gradient ui--gradient-grey on--hover clearfix text-center">
+                                                                    <h5 class="ui--content-box-title-text"><strong>دکتر مرجان فیاضی</strong></h5>
+                                                                    <h6 class="ui--content-box-title-caption">عضو هیئت علمی دانشکده مدیریت دانشگاه تهران</h6>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ui--shadow ui--shadow-type-2 ui--shadow-abs ui--shadow-reset clearfix">
+                                                        <noscript><img src="https://envision.wptation.com/wp-content/themes/envision/includes/modules/module.shadow/shadows/shadow-2.png" alt="shadow" /></noscript>
+                                                        <img class=" ls-is-cached lazyloaded" src="https://envision.wptation.com/wp-content/themes/envision/includes/modules/module.shadow/shadows/shadow-2.png" data-src="https://envision.wptation.com/wp-content/themes/envision/includes/modules/module.shadow/shadows/shadow-2.png" alt="shadow" draggable="false">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ui-column col-md-3 col-sm-6 col-xs-12">
+                                            <div class="ui--box-widget">
+                                                <div class="ui--block ui--content-item ui--pass fx--appear ui--animation-fire">
+                                                    <div class="ui--content-box ui--box ui-row">
+                                                        <div class="ui--content-box-header">
+                                                            <div class="ui--content-box-media effect--fade type--default clearfix" style="padding-bottom: 133.33%;">
+                                                                <a class="ui--content-box-link" href="https://envision.wptation.com/team/team-member/">
+                                                                    <div class="ui--content-box-image-default">
+                                                                        <noscript><img  class="ui--content-box-image" src="https://envision.wptation.com/wp-content/uploads/2013/08/terry_bartlett-1-570x760.jpg" alt="" title=""/></noscript>
+                                                                        <img class="ui--content-box-image ls-is-cached lazyloaded" src="https://envision.wptation.com/wp-content/uploads/2013/08/terry_bartlett-1-570x760.jpg" data-src="https://envision.wptation.com/wp-content/uploads/2013/08/terry_bartlett-1-570x760.jpg" alt="" title="" draggable="false">
+                                                                    </div>
+                                                                    <div class="ui--content-box-overlay">
+                                                                        <div class="ui--content-box-overlay-background"></div>
+                                                                        <div class="center"><span class="btn btn-grey ui--center-vertical" data-height="22" style="margin-top: -11px;">
+                                                                            <span class="ui--content-box-overlay-button-text">سوابق و تحصیلات</span>
+                                                                            <span class="ui--content-box-overlay-button-icon"><i class="ui--icon fontawesome-caret-right"></i></span></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                            <a class="ui--content-box-link" href="https://envision.wptation.com/team/team-member/">
+                                                                <div class="ui--content-box-title ui--gradient ui--gradient-grey on--hover clearfix text-center">
+                                                                    <h5 class="ui--content-box-title-text"><strong>دکتر داوود هزاره ای</strong></h5>
+                                                                    <h6 class="ui--content-box-title-caption">روانشناس بالینی</h6>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ui--shadow ui--shadow-type-2 ui--shadow-abs ui--shadow-reset clearfix">
+                                                        <noscript><img src="https://envision.wptation.com/wp-content/themes/envision/includes/modules/module.shadow/shadows/shadow-2.png" alt="shadow" /></noscript>
+                                                        <img class=" ls-is-cached lazyloaded" src="https://envision.wptation.com/wp-content/themes/envision/includes/modules/module.shadow/shadows/shadow-2.png" data-src="https://envision.wptation.com/wp-content/themes/envision/includes/modules/module.shadow/shadows/shadow-2.png" alt="shadow" draggable="false">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ui-column col-md-3 col-sm-6 col-xs-12">
+                                            <div class="ui--box-widget">
+                                                <div class="ui--block ui--content-item ui--pass fx--appear ui--animation-fire">
+                                                    <div class="ui--content-box ui--box ui-row">
+                                                        <div class="ui--content-box-header">
+                                                            <div class="ui--content-box-media effect--fade type--default clearfix" style="padding-bottom: 133.33%;">
+                                                                <a class="ui--content-box-link" href="https://envision.wptation.com/team/team-member/">
+                                                                    <div class="ui--content-box-image-default">
+                                                                        <noscript><img  class="ui--content-box-image" src="https://envision.wptation.com/wp-content/uploads/2013/08/terry_bartlett-1-570x760.jpg" alt="" title=""/></noscript>
+                                                                        <img class="ui--content-box-image ls-is-cached lazyloaded" src="https://envision.wptation.com/wp-content/uploads/2013/08/terry_bartlett-1-570x760.jpg" data-src="https://envision.wptation.com/wp-content/uploads/2013/08/terry_bartlett-1-570x760.jpg" alt="" title="" draggable="false">
+                                                                    </div>
+                                                                    <div class="ui--content-box-overlay">
+                                                                        <div class="ui--content-box-overlay-background"></div>
+                                                                        <div class="center"><span class="btn btn-grey ui--center-vertical" data-height="22" style="margin-top: -11px;">
+                                                                            <span class="ui--content-box-overlay-button-text">سوابق و تحصیلات</span>
+                                                                            <span class="ui--content-box-overlay-button-icon"><i class="ui--icon fontawesome-caret-right"></i></span></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                            <a class="ui--content-box-link" href="https://envision.wptation.com/team/team-member/">
+                                                                <div class="ui--content-box-title ui--gradient ui--gradient-grey on--hover clearfix text-center">
+                                                                    <h5 class="ui--content-box-title-text"><strong>دکتر محمدمهدی شهبازی</strong></h5>
+                                                                    <h6 class="ui--content-box-title-caption">مدیرعامل</h6>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ui--shadow ui--shadow-type-2 ui--shadow-abs ui--shadow-reset clearfix">
+                                                        <noscript><img src="https://envision.wptation.com/wp-content/themes/envision/includes/modules/module.shadow/shadows/shadow-2.png" alt="shadow" /></noscript>
+                                                        <img class=" ls-is-cached lazyloaded" src="https://envision.wptation.com/wp-content/themes/envision/includes/modules/module.shadow/shadows/shadow-2.png" data-src="https://envision.wptation.com/wp-content/themes/envision/includes/modules/module.shadow/shadows/shadow-2.png" alt="shadow" draggable="false">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+
+
+    <div class="ui-divider"></div>
+    <div class="representation">
+        <div class="container">
+            <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12 content">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+                و ب ا استفاده از طراحان گرافیک است. چاپگرها
+                و متون بلکه روزنامه و مجله در ستون و کارب
+                ردهای متنوع با هدف بهبود ابزارهای کار
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <a href="#">درخواست نمایندگی</a>
+            </div>
+        </div>
+        <img src="assets/images/shadow-2.png"/>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="section col-lg-6 col-md-6 col-sm-6 col-xs-12 zp">
+                <h4 class="title">خبرنامه</h4>
+                <p>لطفا جهت عضویت در خبرنامه آدرس ایمیل خود را وارد کنید</p>
+                <form>
+                    <input type="text"/>
+                    <input type="submit" value="عضویت"/>
+                </form>
+            </div>
+            <div class="section col-lg-6 col-md-6 col-sm-6 col-xs-12 zp faq-blog">
+                <h4 class="title">ویژه مشاوران</h4>
+                <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 zp blog-section">
+                    <div class="date">
+                        <h3>
+                            <span>21</span>
+                        </h3>
+                        <h6>
+                            <span>Jul</span>
+                        </h6>
+                    </div>
+                    <div class="content">
+                        <h5>
+                            <a href="#">
+                                برگزاری دوره آموزش asp.net mvc
+                            </a>
+                        </h5>
+                        <div>
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و ب ا استفاده از
+                            طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                            کاربردهای متنوع با هدف بهبود ابزارهای کار
+                        </div>
+                        <a href="#">ادامه مطلب</a>
+                    </div>
+                </div>
+                <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 zp blog-section">
+                    <div class="date">
+                        <h3>
+                            <span>21</span>
+                        </h3>
+                        <h6>
+                            <span>Jul</span>
+                        </h6>
+                    </div>
+                    <div class="content">
+                        <h5>
+                            <a href="#">
+                                برگزاری دوره آموزش asp.net mvc
+                            </a>
+                        </h5>
+                        <div>
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و ب ا استفاده از
+                            طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                            کاربردهای متنوع با هدف بهبود ابزارهای کار
+                        </div>
+                        <a href="#">ادامه مطلب</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="section col-lg-3 col-md-3 col-sm-6 col-xs-12 zp">
+                <h4 class="title">درباره ما</h4>
+                <div class="content">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از
+                    صنعت چاپ و ب ا استفاده از طراحان گرافیک است.
+                    چاپگرها و متون بلکه روزنامه و مجله در ستون
+                    و کاربردهای متنوع با هدف بهبود ابزارهای کار
+                </div>
+            </div>
+            <div class="section contact col-lg-3 col-md-3 col-sm-6 col-xs-12 zp">
+                <h4 class="title">تماس با ما</h4>
+                <ul>
+                    <li>
+                        <i class="fa fa-phone"></i>
+                        <span>تلفن : 021-13 546 897</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-phone"></i>
+                        <span>تلفن : 021-13 546 897</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-phone"></i>
+                        <span>تلفن : 021-13 546 897</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-phone"></i>
+                        <span>تلفن : 021-13 546 897</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="section col-lg-3 col-md-3 col-sm-6 col-xs-12 zp">
+                <h4 class="title">دسترسی سریع</h4>
+                <ul>
+                    <li>
+                        <a href="#">سامانه امور مشتریان</a>
+                    </li>
+                    <li>
+                        <a href="#">سامانه امور مشتریان</a>
+                    </li>
+                    <li>
+                        <a href="#">سامانه امور مشتریان</a>
+                    </li>
+                    <li>
+                        <a href="#">سامانه امور مشتریان</a>
+                    </li>
+                    <li>
+                        <a href="#">سامانه امور مشتریان</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="section col-lg-3 col-md-3 col-sm-6 col-xs-12 zp">
+                <h4 class="title">دسترسی سریع</h4>
+                <ul>
+                    <li>
+                        <a href="#">سامانه امور مشتریان</a>
+                    </li>
+                    <li>
+                        <a href="#">سامانه امور مشتریان</a>
+                    </li>
+                    <li>
+                        <a href="#">سامانه امور مشتریان</a>
+                    </li>
+                    <li>
+                        <a href="#">سامانه امور مشتریان</a>
+                    </li>
+                    <li>
+                        <a href="#">سامانه امور مشتریان</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 copy-right text-left">
+            Envision - WordPress Theme © 2017
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 copy-right col-xs-12">
+            <ul>
+                <li>
+                    <a href="#">سامانه امور مشتریان</a>
+                </li>
+                /
+                <li>
+                    <a href="#">سامانه امور مشتریان</a>
+                </li>
+                /
+                <li>
+                    <a href="#">سامانه امور مشتریان</a>
+                </li>
+                /
+                <li>
+                    <a href="#">سامانه امور مشتریان</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</div>
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/plugins/owl/dist/owl.carousel.min.js"></script>
+<script type="text/javascript" src="assets/js/easing.js"></script>
+<script type="text/javascript" src="assets/js/script.js"></script>
+</body>
+</html>
